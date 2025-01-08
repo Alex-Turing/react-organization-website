@@ -4,7 +4,7 @@ import FormInput from "../FormInput";
 import OptionList from '../OptionList';
 import Button from "../Button";
 
-const Form = () => {
+const Form = (props) => {
     const [name, setName] = useState("");
     const [position, setPosition] = useState("");
     const [photo, setPhoto] = useState(""); 
@@ -52,6 +52,7 @@ const Form = () => {
                 <OptionList 
                     value={team}
                     setTeamValue={setTeam}
+                    teams={props.teams}
                 />
                 <Button>
                     Crear
