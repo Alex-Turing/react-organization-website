@@ -8,16 +8,18 @@ const Form = () => {
     const [name, setName] = useState("");
     const [position, setPosition] = useState("");
     const [photo, setPhoto] = useState(""); 
+    const [team, setTeam] = useState("");
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
         console.log("Handle Form Submit");  
-        
-        // Crear objeto con la información del empleado:
+
+        // Crear objeto con la información del empleado:   --> Mejorar usando un backend en Node.js
         const employeeInfo = {
             nombre: name,
             puesto: position,
-            foto: photo
+            foto: photo,
+            equipo: team
         }     
 
         console.log(employeeInfo);
@@ -47,7 +49,10 @@ const Form = () => {
                     value={photo} 
                     setValue={setPhoto}
                 />
-                <OptionList />
+                <OptionList 
+                    value={team}
+                    setTeamValue={setTeam}
+                />
                 <Button>
                     Crear
                 </Button>
