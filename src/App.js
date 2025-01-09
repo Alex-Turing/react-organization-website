@@ -88,8 +88,9 @@ function App() {
   };
 
   //Eliminar Empleado
-  const deleteEmployee = () => {
-    console.log('Eliminar empleado');
+  const deleteEmployee = (id) => {
+    const updatedEmployees = employees.filter((employee) => employee.id !== id);  //filter regresa un nuevo arreglo, en este caso los employees que tienen id diferente al recibido
+    setEmployees(updatedEmployees);
   };
 
   //Actualizar color del Team
