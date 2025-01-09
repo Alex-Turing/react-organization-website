@@ -10,7 +10,10 @@ const Form = (props) => {
     const [photo, setPhoto] = useState(""); 
     const [team, setTeam] = useState("");
 
-    const { getEmployeeInformationFromForm } = props;
+    const [title, setTitle] = useState("");
+    const [color, setColor] = useState("");
+
+    const { getEmployeeInformationFromForm, createTeam } = props;
 
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -25,6 +28,12 @@ const Form = (props) => {
 
         getEmployeeInformationFromForm(employeeInfo);
     };
+
+    const handleNewTeam = (e) => {
+        e.preventDefault();
+        createTeam({ title, primaryColor: color });
+    };
+
     return (
         <section className="form">
             <form onSubmit={handleFormSubmit}>
@@ -57,6 +66,27 @@ const Form = (props) => {
                 />
                 <Button>
                     Crear
+                </Button>
+            </form>
+
+            <form onSubmit={handleNewTeam}>
+                <h2>Rellena el formulario para crear el equipo.</h2>
+                <FormInput 
+                    title="Titulo" 
+                    placeholder="Ingresar titulo" 
+                    required 
+                    value={title} 
+                    setValue={setTitle}
+                />
+                <FormInput 
+                    title="Color" 
+                    placeholder="Ingresar el color en Hex"  
+                    required 
+                    value={color} 
+                    setValue={setColor}
+                />
+                <Button>
+                    Registrar Equipo
                 </Button>
             </form>
         </section>

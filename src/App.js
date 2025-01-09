@@ -105,6 +105,11 @@ function App() {
     setTeamFeatures(updatedTeams);
   };
 
+  const createTeam = (newTeam) => {
+    console.log('Creating Team', newTeam);
+    setTeamFeatures([...teamFeatures, { ...newTeam, id: uuid() }]);
+  };
+
   return (
     <div>
       <Header />
@@ -114,6 +119,7 @@ function App() {
         showForm && <Form 
           teams={teamFeatures.map((team) => team.title)} 
           getEmployeeInformationFromForm={getEmployeeInformationFromForm}
+          createTeam={createTeam}
         />
       }
 
