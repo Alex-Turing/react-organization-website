@@ -21,9 +21,6 @@ The **Dynamic User Creator** is a React-based application that enables companies
 
 :rocket: **Active Development**
 
-## Demo
-
-![Demo Gif](https://via.placeholder.com/800x400.png?text=App+Demo)
 
 ## Setup Instructions
 
