@@ -10,19 +10,20 @@ const Form = (props) => {
     const [photo, setPhoto] = useState(""); 
     const [team, setTeam] = useState("");
 
+    const { getEmployeeInformationFromForm } = props;
+
     const handleFormSubmit = (e) => {
         e.preventDefault();
-        console.log("Handle Form Submit");  
 
         // Crear objeto con la información del empleado:   --> Mejorar usando un backend en Node.js
-        const employeeInfo = {
-            nombre: name,
-            puesto: position,
-            foto: photo,
-            equipo: team
+        let employeeInfo = {
+            name,
+            position,
+            photo,
+            team
         }     
 
-        console.log(employeeInfo);
+        getEmployeeInformationFromForm(employeeInfo);
     };
     return (
         <section className="form">
