@@ -5,7 +5,7 @@ import hexToRgba from 'hex-to-rgba';
 const Team = (props) => {
 
     //Destructuracion
-    const {primaryColor, secondaryColor, title} = props.data;
+    const {primaryColor, secondaryColor, title, id} = props.data;
     const { employees, deleteEmployee, updateTeamColor } = props;
 
     const objectBackgroundColor = {
@@ -25,7 +25,7 @@ const Team = (props) => {
                     type="color"
                     value={primaryColor}
                     onChange={(event) => {
-                        updateTeamColor(event.target.value, title)
+                        updateTeamColor(event.target.value, id)
                     }}
                 />
                 <h3 style={objectTitleColor}>{title}</h3>
