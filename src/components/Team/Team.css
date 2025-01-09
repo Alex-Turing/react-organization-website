@@ -4,6 +4,13 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 32px;
+    position: relative;
+}
+
+.color-picker {
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }
 
 .team h3 {
@@ -19,3 +26,4 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+

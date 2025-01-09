@@ -14,21 +14,16 @@ function App() {
       position: 'Full Stack Developer',
       photo: 'https://github.com/Alex-Turing.png',
       team: 'Programming'
+    },
+    {
+      name: 'Marcela Vargas',
+      position: 'Designer',
+      photo: 'https://github.com/Alex-Turing.png',
+      team: 'Front End'
     }
   ]);
-  
-  const switchShowForm = () => {
-    setShowForm(!showForm);
-  };
 
-  //Registrar Empleado
-  const getEmployeeInformationFromForm = (employee) => {
-    // Spread operator --> Copia los valores actuales (...employees) y agrega el nuevo objeto (employee)
-    setEmployees([...employees, employee])
-  };
-
-  //Lista de Equipos
-  const teamFeatures = [
+  const [teamFeatures, setTeamFeatures] = useState([
     {
       title: "Programming",
       primaryColor: "#57C278",
@@ -64,7 +59,34 @@ function App() {
       primaryColor: "#FF8A29",
       secondaryColor: "#FFEEDF"
     }
-  ];
+  ]);
+  
+  const switchShowForm = () => {
+    setShowForm(!showForm);
+  };
+
+  //Registrar Empleado
+  const getEmployeeInformationFromForm = (employee) => {
+    // Spread operator --> Copia los valores actuales (...employees) y agrega el nuevo objeto (employee)
+    setEmployees([...employees, employee])
+  };
+
+  //Eliminar Empleado
+  const deleteEmployee = () => {
+    console.log('Eliminar empleado');
+  };
+
+  //Actualizar color del Team
+  const updateTeamColor = (color, title) => {
+    console.log('Actualizar color del Team', color, title);
+    const updatedTeams = teamFeatures.map((team) => {
+      if (team.title === title) {
+        team.primaryColor = color;
+      }
+      return team;
+    })
+    setTeamFeatures(updatedTeams);
+  };
 
   return (
     <div>
@@ -84,6 +106,8 @@ function App() {
           key={team.title} 
           data={team} 
           employees={employees.filter(employee => employee.team === team.title)} 
+          deleteEmployee={deleteEmployee} 
+          updateTeamColor={updateTeamColor}  
         />
         ) 
       }

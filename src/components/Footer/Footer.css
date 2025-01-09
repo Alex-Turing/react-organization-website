@@ -17,9 +17,10 @@
     width: 30%;
 }
 
-.social-media img{
-    padding: 0px 15px;
-    width: 8%;
+.social-media__icon {
+    margin: 0px 15px;
+    color: white;
+    font-size: 2.5rem;
 }
 
 .footer__text {
