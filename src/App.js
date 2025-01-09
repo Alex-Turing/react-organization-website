@@ -23,8 +23,6 @@ function App() {
 
   //Registrar Empleado
   const getEmployeeInformationFromForm = (employee) => {
-    console.log('New Employee:', employee);
-
     // Spread operator --> Copia los valores actuales (...employees) y agrega el nuevo objeto (employee)
     setEmployees([...employees, employee])
   };
@@ -71,8 +69,6 @@ function App() {
   return (
     <div>
       <Header />
-      {/* Conditional rendering using Ternary Operator */}
-      {/* showForm ? <Form /> : <></> */}
 
       {/* Conditional rendering using Shortcut */}
       {

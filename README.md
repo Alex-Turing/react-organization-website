@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+# Dynamic User Creator for Companies
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Header Image](https://via.placeholder.com/800x200.png?text=Dynamic+User+Creator)
 
-## Available Scripts
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB)](https://react.dev/)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+The **Dynamic User Creator** is a React-based application that enables companies to dynamically create users for different areas within their organization. The app provides a user-friendly interface for adding new employees and customizing CSS styles for each team they belong to.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Create and manage employees dynamically.
+- Assign employees to specific teams.
+- Customize team colors (primary and secondary) based on the area.
+- Real-time display of employee details grouped by teams.
+- Intuitive, responsive user interface.
 
-### `npm test`
+## Project Status
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+:rocket: **Active Development**
 
-### `npm run build`
+## Demo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Demo Gif](https://via.placeholder.com/800x400.png?text=App+Demo)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
 
-### `npm run eject`
+Before running this project, ensure you have the following installed:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Node.js](https://nodejs.org/) (v14+ recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone the repository:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   git clone https://github.com/Alex-Turing/dynamic-user-creator.git
+   cd dynamic-user-creator
+   ```
 
-## Learn More
+2. Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Start the development server:
 
-### Code Splitting
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. Open your browser and navigate to:
 
-### Analyzing the Bundle Size
+   ```
+   http://localhost:3000
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Usage
 
-### Making a Progressive Web App
+### Adding a New Employee
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Click the **Add Employee** button beside to **Mi Organizacion** to reveal the form.
+2. Fill in the employee's name, position, photo URL, and select a team.
+3. Click **Crear** to save the employee.
+4. The employee will appear under their designated team with custom colors.
 
-### Advanced Configuration
+### Team Colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Each team has unique primary and secondary colors:
 
-### Deployment
+| Team                    | Primary Color | Secondary Color |
+|-------------------------|---------------|-----------------|
+| Programming             | #57C278       | #D9F7E9         |
+| Front End               | #82CFFA       | #E8F8FF         |
+| Data Science            | #A6D157       | #F0F8E2         |
+| DevOps                  | #E06B69       | #FDE7E8         |
+| UX / Design             | #DB6EBF       | #FAE9F5         |
+| Mobile                  | #FFBA05       | #FFF5D9         |
+| Management and Innovation | #FF8A29    | #FFEEDF         |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Technologies Used
 
-### `npm run build` fails to minify
+- **React**: For building the user interface.
+- **CSS**: For styling components.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## How to Contribute
+
+1. Fork the repository.
+2. Create a new branch for your feature/bug fix:
+
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Commit your changes and push:
+
+   ```bash
+   git commit -m "Add your feature description"
+   git push origin feature/your-feature-name
+   ```
+
+4. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+- **Developer**: Alexander Hernandez
+- **GitHub**: [Alex-Turing](https://github.com/Alex-Turing)
+- **Email**: alexanderhernandez0684@gmail.com
+
