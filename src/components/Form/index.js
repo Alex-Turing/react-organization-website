@@ -3,6 +3,7 @@ import "./Form.css";
 import FormInput from "../FormInput";
 import OptionList from '../OptionList';
 import Button from "../Button";
+import {v4 as uuid} from "uuid"
 
 const Form = (props) => {
     const [name, setName] = useState("");
@@ -20,10 +21,11 @@ const Form = (props) => {
 
         // Crear objeto con la información del empleado:   --> Mejorar usando un backend en Node.js
         let employeeInfo = {
-            name,
-            position,
-            photo,
-            team
+            name: name,
+            position: position,
+            photo: photo,
+            team: team,
+            id: uuid()
         }     
 
         getEmployeeInformationFromForm(employeeInfo);

@@ -145,7 +145,7 @@ function App() {
           employees={employees.filter(employee => employee.team === team.title)} 
           deleteEmployee={deleteEmployee} 
           updateTeamColor={updateTeamColor}
-          fav={updateFav}   
+          fav={updateFav}
         />
         ) 
       }
