@@ -15,21 +15,24 @@ function App() {
       name: 'Alexander Hernandez',
       position: 'Full Stack Developer',
       photo: 'https://github.com/Alex-Turing.png',
-      team: 'Programming'
+      team: 'Programming',
+      fav: true
     },
     {
       id: uuid(),
       name: 'Sam Forderer',
       position: 'Developer',
       photo: 'https://github.com/samforderer.png',
-      team: 'DevOps'
+      team: 'DevOps',
+      fav: false
     },
     {
       id: uuid(),
       name: 'Marcela Vargas',
       position: 'Designer',
       photo: 'https://github.com/dmvargass.png',
-      team: 'UX / Design'
+      team: 'UX / Design',
+      fav: false
     }
   ]);
 
@@ -110,6 +113,17 @@ function App() {
     setTeamFeatures([...teamFeatures, { ...newTeam, id: uuid() }]);
   };
 
+  const updateFav = (id) => {
+    console.log('Actualizar favorito', id);
+    const updatedEmployees = employees.map((employee) => {
+      if (employee.id === id) {
+        employee.fav = !employee.fav;
+      }
+      return employee;
+    });
+    setEmployees(updatedEmployees);
+  }
+
   return (
     <div>
       <Header />
@@ -130,7 +144,8 @@ function App() {
           data={team} 
           employees={employees.filter(employee => employee.team === team.title)} 
           deleteEmployee={deleteEmployee} 
-          updateTeamColor={updateTeamColor}  
+          updateTeamColor={updateTeamColor}
+          fav={updateFav}   
         />
         ) 
       }

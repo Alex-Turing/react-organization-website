@@ -6,7 +6,7 @@ const Team = (props) => {
 
     //Destructuracion
     const {primaryColor, secondaryColor, title, id} = props.data;
-    const { employees, deleteEmployee, updateTeamColor } = props;
+    const { employees, deleteEmployee, updateTeamColor, fav } = props;
 
     const objectBackgroundColor = {
         backgroundColor: hexToRgba(primaryColor, 0.6)
@@ -36,6 +36,7 @@ const Team = (props) => {
                             data={employee} 
                             primaryColor={primaryColor} 
                             deleteEmployee={deleteEmployee}
+                            updateFav={fav}
                         /> 
                         )
                     }

@@ -37,24 +37,24 @@ const Form = (props) => {
     return (
         <section className="form">
             <form onSubmit={handleFormSubmit}>
-                <h2>Rellena el formulario para crear el colaborador.</h2>
+                <h2>Fill the form to create a new Employee.</h2>
                 <FormInput 
-                    title="Nombre" 
-                    placeholder="Ingresar nombre" 
+                    title="Name" 
+                    placeholder="Enter name" 
                     required 
                     value={name} 
                     setValue={setName}
                 />
                 <FormInput 
-                    title="Puesto" 
-                    placeholder="Ingresar puesto" 
+                    title="Position"
+                    placeholder="Enter position" 
                     required 
                     value={position} 
                     setValue={setPosition}
                 />
                 <FormInput 
-                    title="Foto" 
-                    placeholder="Ingresar enlace de foto" 
+                    title="Photo" 
+                    placeholder="Enter photo URL" 
                     required 
                     value={photo} 
                     setValue={setPhoto}
@@ -65,28 +65,29 @@ const Form = (props) => {
                     teams={props.teams}
                 />
                 <Button>
-                    Crear
+                    Create Employee
                 </Button>
             </form>
 
             <form onSubmit={handleNewTeam}>
-                <h2>Rellena el formulario para crear el equipo.</h2>
+                <h2>Fill the form to create a new Team.</h2>
                 <FormInput 
-                    title="Titulo" 
-                    placeholder="Ingresar titulo" 
+                    title="Title" 
+                    placeholder="Enter title" 
                     required 
                     value={title} 
                     setValue={setTitle}
                 />
                 <FormInput 
                     title="Color" 
-                    placeholder="Ingresar el color en Hex"  
+                    type="color"
+                    placeholder="Enter color in Hex format"  
                     required 
                     value={color} 
                     setValue={setColor}
                 />
                 <Button>
-                    Registrar Equipo
+                    Create Team
                 </Button>
             </form>
         </section>

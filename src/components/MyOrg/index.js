@@ -14,7 +14,7 @@ const MyOrg = (props) => {
 
     return (
         <section className="org-section">
-            <h3 className="title">Mi organizacion</h3>
+            <h3 className="title">My Organization</h3>
             <img src="/img/add.png" alt="my org logo" onClick={props.switchShowForm}/>
         </section>
     );
