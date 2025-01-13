@@ -20,14 +20,6 @@ function App() {
     },
     {
       id: uuid(),
-      name: 'Sam Forderer',
-      position: 'Developer',
-      photo: 'https://github.com/samforderer.png',
-      team: 'DevOps',
-      fav: false
-    },
-    {
-      id: uuid(),
       name: 'Marcela Vargas',
       position: 'Designer',
       photo: 'https://github.com/dmvargass.png',
