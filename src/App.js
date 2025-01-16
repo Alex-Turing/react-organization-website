@@ -8,7 +8,7 @@ import Team from './components/Team';
 import Footer from './components/Footer';
 
 function App() {
-  const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(true);
   const [employees, setEmployees] = useState([
     {
       id: uuid(),
