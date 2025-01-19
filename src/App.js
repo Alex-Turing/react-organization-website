@@ -48,6 +48,7 @@ function App() {
       secondaryColor: "#F0F8E2"
     },
     {
+      id: uuid(),
       title: "DevOps",
       primaryColor: "#E06B69",
       secondaryColor: "#FDE7E8"
